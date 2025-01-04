@@ -4,10 +4,35 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import Bootstrap JS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 function App() {
+    const [showHeader, setShowHeader] = useState(true);
+  let lastScrollY = 0;
+
+  const handleScroll = () => {
+    // Check if the user scrolls down or up
+    if (window.scrollY > lastScrollY) {
+      // Scrolling down
+      setShowHeader(false);
+    } else {
+      // Scrolling up
+      setShowHeader(true);
+    }
+    lastScrollY = window.scrollY;
+  };
+
+  useEffect(() => {
+    // Add event listener for scroll
+    window.addEventListener("scroll", handleScroll);
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div>
       {/* Header (Navbar) */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <nav 
+        className={`navbar navbar-expand-lg navbar-light bg-light fixed-top ${showHeader ? '' : 'd-none'}`}
+        >
         <div className="container-fluid">
           <a className="navbar-brand" href="#">My Website</a>
           <button
