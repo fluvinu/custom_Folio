@@ -86,19 +86,42 @@ function App() {
         </button>
       </div>
 
-      {/* Main Content Section */}
-      <div id="home" className="container mt-5 pt-5">
-        <div className="row">
-          <div className="col-md-12">
-            <h2>Welcome to Our Website</h2>
-            <p>This is the main content section where you can add your content, text, images, etc.</p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-              Suspendisse potenti. Nulla pretium augue at risus tempor, ac vehicula leo accumsan.
-            </p>
+        {/* Main Content Section */}
+        <div id="home" className="container mt-5 pt-5">
+          <div className="row">
+            <div className="col-md-12">
+              <h2>Welcome to Our Website</h2>
+              
+              <div className="row">
+                
+                {/* Text Content */}
+                <div className="col-12 col-md-6 mb-4">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+                    Suspendisse potenti. Nulla pretium augue at risus tempor, ac vehicula leo accumsan.
+                  </p>
+                  <p>
+                    Curabitur vehicula lacus a nulla feugiat, vel egestas ligula elementum. In sed nunc eu mauris tincidunt consectetur.
+                  </p>
+                </div>
+        
+                {/* YouTube Video Embed */}
+                <div className="col-12 col-md-6 mb-4">
+                  <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden", maxWidth: "100%" }}>
+                    <iframe
+                      src="https://www.youtube.com/embed/y_0Orh7YI4I?si=ehuqrtrAhoLNTncz" // Replace with the desired video URL
+                      style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                      title="YouTube video"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
+        
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
       {/* About Section */}
       <div id="about" className="container mt-5 pt-5">
