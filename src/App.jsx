@@ -37,16 +37,16 @@ function App() {
         </div>
       </nav>
 
-      {/* Slider Section (Carousel) */}
+       {/* Slider Section (Carousel) */}
       <div
         id="carouselExampleControls"
-        className="carousel slide"
+        className="carousel slide mt-5" // Add margin-top here
         data-bs-ride="carousel"
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="https://via.placeholder.com/1920x600/007bff/ffffff?text=Slide+1" // Assuming the image is in the public/images directory
+              src="https://via.placeholder.com/1920x600/007bff/ffffff?text=Slide+1"
               className="d-block w-100"
               alt="Slide 1"
             />
